@@ -13,3 +13,77 @@
  *= require_tree .
  *= require_self
  */
+@import url(https://fonts.googleapis.com/css?family=Irish+Grover);
+
+body {
+
+}
+
+nav {
+  padding: 15px;
+   background-image: url("banner.jpg");
+   background-position: center;
+   border-radius: 35px;
+   height: 135px;
+   background-size: 100%;
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-color: black;
+}
+
+.movie {
+   display: inline-block;
+   padding: 25px;
+   position: relative;
+ }
+
+ .movie img {
+   display: block;
+   width: 300px;
+   height: 400px;
+   border-radius: 5%;
+   box-shadow: 5px 5px 5px #888888;
+   -webkit-transition: all .5s ease;
+     -moz-transition: all .5s ease;
+       -o-transition: all .5s ease;
+      -ms-transition: all .5s ease;
+          transition: all .5s ease;
+ }
+
+ .movie img:hover {
+  -webkit-filter: opacity(0.50);
+}
+
+.actor {
+   display: inline-block;
+   padding: 15px;
+   /*border: 1px solid black;
+   border-radius: 40%;*/
+ }
+
+ .actor img {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   width: 115px;
+   height: 175px;
+   border-radius: 15%;
+   box-shadow: 5px 5px 5px #888888;
+   -webkit-transition: all .5s ease;
+     -moz-transition: all .5s ease;
+       -o-transition: all .5s ease;
+      -ms-transition: all .5s ease;
+          transition: all .5s ease;
+ }
+
+ .actor img:hover {
+  /*width: 180px;
+  height: 205px;*/
+  /*-webkit-filter: grayscale(100%);
+  -webkit-filter: hue-rotate(111deg);*/
+  -webkit-filter: opacity(0.50);
+}
+
+ .actorS {
+   display: inline-block;
+ }
