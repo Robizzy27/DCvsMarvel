@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root to: 'movies#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -13,6 +14,11 @@ Rails.application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
+  resources :publishers
+  resources :directors
+  resources :movies
+  resources :actors
+
 
   # Example resource route with options:
   #   resources :products do
