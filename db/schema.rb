@@ -11,15 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160401234803) do
+ActiveRecord::Schema.define(version: 20160402041654) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "actors", force: :cascade do |t|
-    t.string "name"
-    t.string "image"
+    t.string  "name"
+    t.string  "image"
+    t.integer "movie_id"
   end
+
+  add_index "actors", ["movie_id"], name: "index_actors_on_movie_id", using: :btree
 
   create_table "directors", force: :cascade do |t|
     t.string "name"
@@ -27,16 +30,24 @@ ActiveRecord::Schema.define(version: 20160401234803) do
   end
 
   create_table "movies", force: :cascade do |t|
-    t.string "title"
-    t.string "image"
-    t.string "synopsis"
-    t.string "runtime"
-    t.string "budget"
-    t.string "opening"
+    t.string  "title"
+    t.string  "image"
+    t.string  "synopsis"
+    t.string  "runtime"
+    t.string  "budget"
+    t.string  "opening"
+    t.integer "publisher_id"
+    t.integer "director_id"
   end
+
+  add_index "movies", ["director_id"], name: "index_movies_on_director_id", using: :btree
+  add_index "movies", ["publisher_id"], name: "index_movies_on_publisher_id", using: :btree
 
   create_table "publishers", force: :cascade do |t|
     t.string "name"
   end
 
+  add_foreign_key "actors", "movies"
+  add_foreign_key "movies", "directors"
+  add_foreign_key "movies", "publishers"
 end

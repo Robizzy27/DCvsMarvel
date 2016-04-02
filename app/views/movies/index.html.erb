@@ -1,8 +1,8 @@
 <h1>The Movies</h1>
 <% @movies.each do |movie| %>
   <div class="movie">
-    <h3><%= link_to movie.title, movie %></h3>
-    <%= link_to (image_tag movie.image), movie %>
+    <h3><%= link_to movie.title, movie %> (<%= movie.opening%>)</h3>
     <p>Publisher: <%= movie.publisher.name if movie.publisher %></p>
+    <%= link_to (image_tag movie.image), movie %>
 </div>
 <% end %>
