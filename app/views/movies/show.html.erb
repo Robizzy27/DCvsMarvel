@@ -1,7 +1,6 @@
 <h1><%= @movie.title %></h1>
-<p>Directed by <%= @movie.director.name %></p>
-<p><%= image_tag @movie.image %></p>
-Released in <%= @movie.opening%> by <%= @movie.publisher.name %> Comics with a budget of <%= @movie.budget %>.
+<p class="movie"><%= image_tag @movie.image %></p>
+<p>Released in <%= @movie.opening%> by <%= @movie.publisher.name %> Comics with a budget of <%= @movie.budget %>.</p>
 <p><%= @movie.synopsis %></p>
 <div>
   <h2>Director:</h2>

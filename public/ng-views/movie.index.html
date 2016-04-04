@@ -1,0 +1,10 @@
+<h1>The Movies</h1>
+
+<div data-ng-repeat="movie in indexVM.movies">
+  <div>
+    <h3>{{movie.title}}</h3>
+  </div>
+  <div>
+    <img class="img-responsive img-rounded" data-ng-src="{{movie.image}}" />
+  </div>
+</div>
