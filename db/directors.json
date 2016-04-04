@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Zack Snyder",
+    "image": "zack.jpg"
+  },
+  {
+    "name": "Joe Johnson",
+    "image": "joe.jpg"
+  },
+  {
+    "name": "Anthony Russo",
+    "image": "russo.jpg"
+  },
+  {
+    "name": "Tim Miller",
+    "image": "tim.jpg"
+  },
+  {
+    "name": "David Ayer",
+    "image": "david.jpg"
+  },
+  {
+    "name": "Patty Jenkins",
+    "image": "patty.jpg"
+  }
+]
