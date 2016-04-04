@@ -1,9 +1,8 @@
-<%= javascript_include_tag "movies" %>
-<div data-ng-app="movie">
-  <header>
-    <h1><a data-ui-sref="index" href="#">DC vs. Marvel</a></h1>
-  </header>
-  <main data-ui-view>
-  </main>
-
+<h1>The Movies</h1>
+<% @movies.each do |movie| %>
+  <div class="movie">
+    <h3><%= link_to movie.title, movie %> (<%= movie.opening%>)</h3>
+    <p>Publisher: <%= movie.publisher.name if movie.publisher %></p>
+    <%= link_to (image_tag movie.image), movie %>
 </div>
+<% end %>
