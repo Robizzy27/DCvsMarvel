@@ -22,12 +22,17 @@
   .controller("indexController", [
     "MovieFactory",
     indexCtrlFunction
-  ]);
+  ])
+  // .controller("showController", [
+  //   "MovieFactory",
+  //   "$stateParams",
+  //   showCtrlFunction
+  // ]);
   function RouterFunction($stateProvider){
     $stateProvider
     .state("index", {
       url: "/",
-      templateUrl: "ng-views/index.html",
+      templateUrl: "/ng-views/index.html",
       controller: "indexController",
       controllerAs: "indexVM"
     });
@@ -42,8 +47,12 @@
   function indexCtrlFunction(MovieFactory){
      var indexVM = this;
      indexVM.movies = MovieFactory.all;
-    // indexVM.Movie = new Movie();
   }
+  // function showCtrlFunction($stateParams , MovieFactory){
+  //    var indexVM = this;
+  //    indexVM.movies = MovieFactory.all;
+  //   indexVM.Movie = new Movie();
+  // }
 
 
 })();

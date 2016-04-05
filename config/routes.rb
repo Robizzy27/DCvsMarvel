@@ -6,6 +6,6 @@ Rails.application.routes.draw do
   resources :movies
   resources :actors
 
-  root to: "main#index"
+  root to: "movies#index"
 
 end
