@@ -2,7 +2,7 @@
 //= require angular-resource.min
 //= require angular-ui-router.min
 
-"use strict";
+
 
 (function(){
 
@@ -23,11 +23,11 @@
     "MovieFactory",
     indexCtrlFunction
   ])
-  // .controller("showController", [
-  //   "MovieFactory",
-  //   "$stateParams",
-  //   showCtrlFunction
-  // ]);
+  .controller("showController", [
+    "MovieFactory",
+    "$stateParams",
+    showCtrlFunction
+  ]);
   function RouterFunction($stateProvider){
     $stateProvider
     .state("index", {
@@ -35,24 +35,28 @@
       templateUrl: "/ng-views/index.html",
       controller: "indexController",
       controllerAs: "indexVM"
+    })
+    .state("show", {
+      url: "/:id",
+      templateUrl: "/ng-views/show.html",
+      controller: "showController",
+      controllerAs: "showVM"
     });
   }
   function ResourceFactoryFunction($resource){
     var Movie = $resource("http://localhost:3000/movies/:id.json", {}, {
       update: {method: "PUT"}
     });
-    Movie.all = Movie.query()
+    Movie.all = Movie.query();
     return Movie;
   }
   function indexCtrlFunction(MovieFactory){
      var indexVM = this;
      indexVM.movies = MovieFactory.all;
   }
-  // function showCtrlFunction($stateParams , MovieFactory){
-  //    var indexVM = this;
-  //    indexVM.movies = MovieFactory.all;
-  //   indexVM.Movie = new Movie();
-  // }
+  function showCtrlFunction($stateParams , MovieFactory){
+     var indexVM = this;
+  }
 
 
 })();

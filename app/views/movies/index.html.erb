@@ -1,16 +1,22 @@
 
 <div class="container" data-ng-app="movies">
 
-  <h1><a data-ui-sref="index" href="#">Linkin single!</a></h1>
+  <h1><a data-ui-sref="index" href="#">Index Angular Page</a></h1>
 
+  <h1><a data-ui-sref="show" href="#">Show Angular Page</a></h1>
 
 
 <main data-ui-view></main>
   </div>
 
 <% @movies.each do |movie| %>
+
   <div class="movie">
-    <!-- <h1><a data-ui-sref="show{(id: movie.id)}" href="#">Linkin!</a></h1> -->
+    <%= movie.id %>
+
+      <h1> <a data-ui-sref="show({id:1})" href="#">Show Angular Style!</a></h1>
+
+
     <h3><%= link_to movie.title, movie %> (<%= movie.opening%>)</h3>
     <p>Publisher: <%= movie.publisher.name if movie.publisher %></p>
     <%= link_to (image_tag movie.image), movie %>
