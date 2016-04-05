@@ -1,24 +1,24 @@
 <h1 class="header">New Movie</h1>
 
-<%= form_for @locations do |f| %>
+<%= form_for @movie do |f| %>
   <%= f.label :title %>
   <%= f.text_field :title %>
+
+  <%= f.label :image %>
+  <%= f.text_field :image %>
 
   <%= f.label :synopsis %>
   <%= f.text_field :synopsis %>
 
-  <%= f.label :territory_type %>
-  <%= f.text_field :territory_type %>
+  <%= f.label :runtime %>
+  <%= f.text_field :runtime %>
 
-  <%= f.label :territory_type %>
-  <%= f.text_field :territory_type %>
+  <%= f.label :budget %>
+  <%= f.text_field :budget %>
 
-  <%= f.label :territory_type %>
-  <%= f.text_field :territory_type %>
+  <%= f.label :opening %>
+  <%= f.text_field :opening %>
 
-  <%= f.label :territory_type %>
-  <%= f.text_field :territory_type %>
-
-  <%= f.submit "Add location" %>
+  <%= f.submit "Add Movie" %>
 
 <% end %>
