@@ -250,9 +250,27 @@ a {
 #container{
   display: block;
 }
+
+#container #scrollbar,
+#container #sidebar,
+#container #synopsis,
+#container #director,
+#container #actors  {
+  background-color: rgba(0, 0, 0, 0.50);
+  margin: 1px;
+  padding: 10px;
+}
+
+#container #scrollbar{
+  min-height: 470px;
+  width: 8%;
+  height: 100%;
+  float: left;
+}
+
 #container #sidebar{
   min-height: 450px;
-  width: 23%;
+  width: 28%;
   height: 100%;
   float: left;
   padding: 10px;
@@ -262,7 +280,7 @@ a {
 
 }
 #container #content{
-  width: 75%;
+  width: 60%;
   float: left;
 
 }
@@ -272,11 +290,11 @@ a {
   padding-top: 30px;
 }
 #container #director{
-  width: 11%;
+  width: 15%;
   float: left;
 }
 #container #actors{
-  width: 84%;
+  width: 79%;
   float: left;
 }
 #actors .actor{
