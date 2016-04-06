@@ -21,6 +21,8 @@ class MoviesController < ApplicationController
 
   def edit
     @movie = Movie.find(params[:id])
+    @directors = Director.all
+    @publishers = Publisher.all
   end
 
   def update
