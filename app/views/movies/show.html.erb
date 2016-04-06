@@ -1,5 +1,6 @@
 <h1><%= @movie.title %></h1>
 <h2> <%= link_to "Edit Movie", edit_movie_path %> </h2>
+<h3> <%= link_to "Back", root_path %> </h3>
 <p>Directed by <%= @movie.director.name %></p>
 <p><%= image_tag @movie.image %></p>
 Released in <%= @movie.opening%> by <%= @movie.publisher.name %> Comics with a budget of <%= @movie.budget %>.
