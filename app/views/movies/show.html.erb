@@ -14,6 +14,7 @@
         <%= image_tag @movie.image %>
         <p><%= link_to (@movie.video_url) %></p>
       </div>
+
     </div>
     <div id="content">
       <div id="synopsis">
@@ -43,3 +44,5 @@
     </div>
     <div class='clearfix'></div>
   </div>
+  <h2> <%= link_to "Edit Movie", edit_movie_path %> </h2>
+  <h3> <%= link_to "Back", publishers_path %> </h3>

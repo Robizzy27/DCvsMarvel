@@ -1,0 +1,42 @@
+
+<%= form_for @movie do |f| %>
+
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.label :director %>
+  <%= f.select(:director) do %>
+    <%= @directors.each do |director| %>
+      <%= content_tag(:option, director.name, value: director.id) %>
+    <% end %>
+  <% end %>
+
+  <%= f.label :image %>
+  <%= f.text_field :image %>
+
+  <%= f.label :synopsis %>
+  <%= f.text_field :synopsis %>
+
+  <%= f.label :runtime %>
+  <%= f.text_field :runtime %>
+
+  <%= f.label :budget %>
+  <%= f.text_field :budget %>
+
+  <%= f.label :opening %>
+  <%= f.text_field :opening %>
+
+  <%= f.label :publisher %>
+  <%= f.select(:publisher) do %>
+    <%= @publishers.each do |publisher| %>
+      <%= content_tag(:option, publisher.name, value: publisher.id) %>
+    <% end %>
+  <% end %>
+
+  <%= f.submit "Edit" %>
+
+<% end %>
+
+<%= link_to "Delete Movie", @movie, method: :delete, class: "delete" %>
+
+<%= link_to "Back", @movie %>
