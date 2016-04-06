@@ -15,12 +15,13 @@ class MoviesController < ApplicationController
     @movie = Movie.new
     @directors = Director.all
     @publishers = Publisher.all
+
   end
 
   def create
     @movie = Movie.create(movie_params)
     # For directors, movies, actors, create an input for them in the form on new page.  However, you will need to specify here in controller what to do.  If the director already exists, assign the appropriate ID; if not, create a new director id #
-    redirect_to movies_path(@movie)
+    redirect_to publishers_path(@publisher)
   end
 
   def edit
@@ -32,13 +33,13 @@ class MoviesController < ApplicationController
   def update
     @movie = Movie.find(params[:id])
     @movie.update(movie_params)
-    redirect_to movies_path(@movie)
+    redirect_to publishers_path(@publisher)
   end
 
   def destroy
     @movie = Movie.find(params[:id])
     @movie.destroy
-    redirect_to movies_path
+    redirect_to publishers_path
   end
 
   private
