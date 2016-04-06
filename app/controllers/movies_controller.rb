@@ -13,6 +13,7 @@ class MoviesController < ApplicationController
 
   def create
     @movie = Movie.create(movie_params)
+    # For directors, movies, actors, create an input for them in the form on new page.  However, you will need to specify here in controller what to do.  If the director already exists, assign the appropriate ID; if not, create a new director id #
     redirect_to movies_path(@movie)
   end
 
