@@ -1,6 +1,11 @@
-<div class="publisherindex">
+<%= javascript_include_tag "angular"%>
+<%= javascript_include_tag "application"%>
+
+
+<div class="publisherindex" data-ng-app="movie">
   <div>
-    <h1>Welcome to our Marvel vs. DC movies page!</h1>
+    
+    <h1 data-ui-view>Welcome to our Marvel vs. DC movies page!</h1>
   </div>
   <div class="publisher">
     <% @publishers.each do |publisher| %>

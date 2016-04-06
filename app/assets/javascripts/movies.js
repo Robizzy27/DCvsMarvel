@@ -2,7 +2,7 @@
 //= require angular-resource.min
 //= require angular-ui-router.min
 
-"use strict"
+"use strict";
 
 (function(){
 
@@ -33,13 +33,13 @@
       $stateProvider
       .state("index", {
         url: "/",
-        templateUrl: "ng-views/movie.index.html",
+        templateUrl: "ng-views/index.html",
         controller: "indexCtrl",
         controllerAs: "indexVM"
       })
       .state("show", {
         url: "/:id",
-        templateUrl: "ng-views/movie.show.html",
+        templateUrl: "ng-views/show.html",
         controller: "showCtrl",
         controllerAs: "showVM"
       });

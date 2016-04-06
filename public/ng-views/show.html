@@ -1,0 +1,39 @@
+<div id="container" data-ng-app="movie">
+  <div id="scrollbar">
+    {{showVM.movie.publisher.name}} movies
+  </div>
+  <div id="sidebar">
+    <div class='movieshow'>
+      <h1>{{showVM.movie.title}} ({{showVM.movie.opening}})</h1>
+      <p>Directed by <%= @movie.director.name %></p>
+      <%= image_tag @movie.image %>
+    </div>
+  </div>
+  <div id="content">
+    <div id="synopsis">
+      <p>Released in <%= @movie.opening%> by <%= @movie.publisher.name %> Comics with a budget of <%= @movie.budget %>.</p>
+      <p><%= @movie.synopsis %></p>
+    </div>
+    <div id="bottom">
+      <div id="director">
+        <h3>Director:</h3>
+          <div class="actor">
+          <%= @movie.director.name %>
+            <%= image_tag @movie.director.image %>
+          </div>
+      </div>
+      <div id="actors">
+
+        <h3>Actors:</h3>
+        <% @movie.actors.each do |actor| %>
+          <div class="actor">
+          <%= actor.name %>
+            <%= image_tag actor.image %>
+          </div>
+        <% end %>
+      </div>
+
+    </div>
+  </div>
+  <div class='clearfix'></div>
+</div>
