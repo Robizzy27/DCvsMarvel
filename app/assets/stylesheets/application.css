@@ -72,8 +72,8 @@ a {
 }*/
 
 #publisher {
-  /*display: inline-block;
-  /*padding: 25px;*/*/
+  /*display: inline-block;*/
+  /*padding: 25px;*/
   position: inherit;
   background-color: rgba(0, 0, 0, 0.50);
   /*margin: 1px;*/
