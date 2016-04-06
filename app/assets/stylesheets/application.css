@@ -16,7 +16,14 @@
 @import url(https://fonts.googleapis.com/css?family=Irish+Grover);
 
 body {
-
+  background-image: url("wallpaper3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  background-image: opacity(0.50);
+  text-align: center;
+  padding: 15px;
+  font-size: 16px;
 }
 
 nav {
@@ -31,6 +38,110 @@ nav {
    background-color: black;
 }
 
+a {
+  color: inherit;
+}
+/*#myContainer {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+.myWrapper {
+  position: relative;
+}
+
+.myTarget {
+  position: relative;
+  display: block;
+}
+
+#marvel {
+  top: 100px;
+  right: 100px;
+  width: 50px;
+  height: 20px;
+}
+
+#dc {
+  top: 0px;
+  left: : 100px;
+  width: 150px;
+  height: 100px;
+}*/
+
+#publisher {
+  /*display: inline-block;
+  /*padding: 25px;*/*/
+  position: inherit;
+  background-color: rgba(0, 0, 0, 0.50);
+  /*margin: 1px;*/
+  padding: 10px;
+  /*margin: 0;
+  padding: 0;*/
+  display: inline-grid;
+  border-radius: 35px;
+}
+
+.publisherindex {
+  display: inline-block;
+  padding: 25px;
+  position: inherit;
+  background-color: rgba(0, 0, 0, 0.50);
+  /*margin: 1px;*/
+  padding: 10px;
+  /*margin: 0;
+  padding: 0;*/
+  display: inline-grid;
+  border-radius: 35px;
+}
+
+.publisher {
+  display: inline-block;
+  padding: 25px;
+  position: inherit;
+  /*background-color: rgba(0, 0, 0, 0.50);*/
+  /*margin: 1px;*/
+  padding: 10px;
+  /*margin: 0;
+  padding: 0;*/
+  display: inline-grid;
+  border-radius: 35px;
+}
+
+.publisher img {
+  display: block;
+     margin-left: auto;
+     margin-right: auto;
+     width: 200px;
+     height: 175px;
+  -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+      -o-transition: all .5s ease;
+     -ms-transition: all .5s ease;
+         transition: all .5s ease;
+}
+
+.publishershow {
+  display: inline-block;
+  padding: 25px;
+  position: inherit;
+}
+
+.publishershow img {
+  display: block;
+     margin-left: auto;
+     margin-right: auto;
+     width: 100px;
+     height: 75px;
+  -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+      -o-transition: all .5s ease;
+     -ms-transition: all .5s ease;
+         transition: all .5s ease;
+}
+
 .movie {
    display: inline-block;
    padding: 25px;
@@ -39,8 +150,8 @@ nav {
 
  .movie img {
    display: block;
-   width: 300px;
-   height: 400px;
+   width: 200px;
+   height: 300px;
    border-radius: 5%;
    box-shadow: 5px 5px 5px #888888;
    -webkit-transition: all .5s ease;
@@ -51,6 +162,40 @@ nav {
  }
 
  .movie img:hover {
+  -webkit-filter: opacity(0.50);
+ }
+
+ .movieshow {
+    display: inline-block;
+    padding: 25px;
+    position: inherit;
+    text-align: left;
+  }
+
+  .movietext {
+     float: right;
+   }
+
+  p {
+    padding: 10px;
+    font-size: 18px;
+  }
+  .movieshow img {
+    float: left;
+    display: block;
+    border-radius: 10px;
+    width: 200px;
+    height: 300px;
+    border-radius: 5%;
+    box-shadow: 5px 5px 5px #888888;
+    -webkit-transition: all .5s ease;
+      -moz-transition: all .5s ease;
+        -o-transition: all .5s ease;
+       -ms-transition: all .5s ease;
+           transition: all .5s ease;
+  }
+
+ .movieshow img:hover {
   -webkit-filter: opacity(0.50);
 }
 
@@ -84,6 +229,80 @@ nav {
   -webkit-filter: opacity(0.50);
 }
 
- .actorS {
-   display: inline-block;
+
+
+
+ #container #sidebar,
+ #container #synopsis,
+ #container #director,
+ #container #actors  {
+   background-color: rgba(0, 0, 0, 0.50);
+   margin: 1px;
+   padding: 10px;
  }
+
+#container *{
+  margin: 0;
+  padding: 0;
+  display: block;
+  border-radius: 35px;
+}
+#container{
+  display: block;
+}
+#container #sidebar{
+  min-height: 450px;
+  width: 23%;
+  height: 100%;
+  float: left;
+  padding: 10px;
+  padding-top: 30px;
+}
+#sidebar .poster{
+
+}
+#container #content{
+  width: 75%;
+  float: left;
+
+}
+#container #synopsis{
+  min-height: 210px;
+  padding: 10px;
+  padding-top: 30px;
+}
+#container #director{
+  width: 11%;
+  float: left;
+}
+#container #actors{
+  width: 84%;
+  float: left;
+}
+#actors .actor{
+  float: left;
+  width: 33%;
+}
+
+#actors .actor img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 115px;
+  height: 175px;
+  border-radius: 15%;
+  box-shadow: 5px 5px 5px #888888;
+  -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+      -o-transition: all .5s ease;
+     -ms-transition: all .5s ease;
+         transition: all .5s ease;
+}
+
+#actors .actor p{
+  font-size: 1em;
+}
+
+.clearfix{
+  clear:both;
+}
