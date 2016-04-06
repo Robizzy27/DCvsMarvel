@@ -1,0 +1,30 @@
+
+<%= form_for @movie do |f| %>
+
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.label :director %>
+  <%= f.text_field :director %>
+
+  <%= f.label :image %>
+  <%= f.text_field :image %>
+
+  <%= f.label :synopsis %>
+  <%= f.text_field :synopsis %>
+
+  <%= f.label :runtime %>
+  <%= f.text_field :runtime %>
+
+  <%= f.label :budget %>
+  <%= f.text_field :budget %>
+
+  <%= f.label :opening %>
+  <%= f.text_field :opening %>
+
+  <%= f.label :publisher %>
+  <%= f.text_field :publisher %>
+
+  <%= f.submit "Edit" %>
+
+<% end %>
