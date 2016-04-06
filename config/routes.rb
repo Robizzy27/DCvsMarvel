@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'movies#index'
+  root to: 'publishers#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -18,7 +18,6 @@ Rails.application.routes.draw do
   resources :directors
   resources :movies
   resources :actors
-
 
   # Example resource route with options:
   #   resources :products do

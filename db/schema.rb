@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 20160402041654) do
 
   create_table "publishers", force: :cascade do |t|
     t.string "name"
+    t.string "image"
   end
 
   add_foreign_key "actors", "movies"

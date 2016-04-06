@@ -10,8 +10,8 @@ Director.destroy_all
 Movie.destroy_all
 Actor.destroy_all
 
-marvel = Publisher.create(name: "Marvel")
-dc = Publisher.create(name: "DC")
+marvel = Publisher.create(name: "Marvel", image: "MarvelLogo.gif")
+dc = Publisher.create(name: "DC", image: "DCLogo.gif")
 
 zack = Director.create(name: "Zack Snyder", image: "zack.jpg")
 joe = Director.create(name: "Joe Johnston", image: "joe.jpg")

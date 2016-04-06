@@ -1,0 +1,12 @@
+<div class="publisherindex">
+  <div>
+    <h1>Welcome to our Marvel vs. DC movies page!</h1>
+  </div>
+  <div class="publisher">
+    <% @publishers.each do |publisher| %>
+      <div class="publisher">
+        <%= link_to (image_tag publisher.image), publisher %>
+      </div>
+    <% end %>
+  </div>
+</div>
