@@ -1,10 +1,12 @@
 <% content_for :head do %>
-  <%#= javascript_include_tag 'angular'%>
-  <%#= javascript_include_tag 'application'%>
+  <%= javascript_include_tag 'angular'%>
+  <%= javascript_include_tag 'application'%>
 <% end %>
 
-  <div id="container">
-    <div id="scrollbar">testing</div>
+  <div id="container" data-ng-app="movie">
+    <div id="scrollbar">
+      <%= @movie.publisher.name %> movies
+    </div>
     <div id="sidebar">
       <div class='movieshow'>
         <h1><%= @movie.title %> (<%= @movie.opening%>)</h1>
