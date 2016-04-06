@@ -9,6 +9,8 @@ class MoviesController < ApplicationController
 
   def new
     @movie = Movie.new
+    @directors = Director.all
+    @publishers = Publisher.all
   end
 
   def create

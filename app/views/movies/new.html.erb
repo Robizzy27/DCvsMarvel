@@ -4,8 +4,12 @@
   <%= f.label :title %>
   <%= f.text_field :title %>
 
-  <%= f.label :director %>
-  <%= f.text_field :director %>
+  <%= f.label :director %>  <!-- This is how you create a dropdown. -->
+  <%= f.select(:director_id) do %>
+    <%= @directors.each do |director| %>
+      <%= content_tag(:option, director.name, value: director.id) %>
+    <% end %>
+  <% end %>
 
   <%= f.label :image %>
   <%= f.text_field :image %>
@@ -23,7 +27,12 @@
   <%= f.text_field :opening %>
 
   <%= f.label :publisher %>
-  <%= f.text_field :publisher %>
+  <%= f.select(:publisher_id) do %>
+    <%= @publishers.each do |publisher| %>
+      <%= content_tag(:option, publisher.name, value: publisher.id) %>
+    <% end %>
+  <% end %>
+
 
   <%= f.submit "Add Movie" %>
 
