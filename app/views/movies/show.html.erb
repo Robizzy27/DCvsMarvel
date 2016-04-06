@@ -12,7 +12,7 @@
         <h1><%= @movie.title %> (<%= @movie.opening%>)</h1>
         <p>Directed by <%= @movie.director.name %></p>
         <%= image_tag @movie.image %>
-        <p><%= link_to (@movie.video_url) %></p>
+        <p><%= link_to @movie.video_url %></p>
       </div>
 
     </div>
@@ -20,6 +20,7 @@
       <div id="synopsis">
         <p>Released in <%= @movie.opening%> by <%= @movie.publisher.name %> Comics with a budget of <%= @movie.budget %>.</p>
         <p><%= @movie.synopsis %></p>
+        <h3><%= link_to "Edit Movie", edit_movie_path %>  <%= link_to "Back", publishers_path %> </h3>
       </div>
       <div id="bottom">
         <div id="director">
@@ -44,5 +45,3 @@
     </div>
     <div class='clearfix'></div>
   </div>
-  <h2> <%= link_to "Edit Movie", edit_movie_path %> </h2>
-  <h3> <%= link_to "Back", publishers_path %> </h3>

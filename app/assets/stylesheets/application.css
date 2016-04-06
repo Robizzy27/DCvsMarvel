@@ -28,6 +28,8 @@ body {
 
 nav {
   padding: 15px;
+  border: solid 2px #EFEFEF;
+  box-shadow: 5px 5px 5px #888888;
    background-image: url("banner.jpg");
    background-position: center;
    border-radius: 35px;
@@ -150,6 +152,7 @@ a {
  }
 
  .movie img {
+   border: solid 2px #EFEFEF;
    display: block;
    width: 200px;
    height: 300px;
@@ -183,6 +186,7 @@ a {
   }
   .movieshow img {
     float: left;
+    border: solid 2px #EFEFEF;
     display: block;
     border-radius: 10px;
     width: 200px;
@@ -209,6 +213,7 @@ a {
 
  .actor img {
    display: block;
+   border: solid 2px #EFEFEF;
    margin-left: auto;
    margin-right: auto;
    width: 115px;
