@@ -12,6 +12,7 @@
         <h1><%= @movie.title %> (<%= @movie.opening%>)</h1>
         <p>Directed by <%= @movie.director.name %></p>
         <%= image_tag @movie.image %>
+        <p><%= link_to (@movie.video_url) %></p>
       </div>
     </div>
     <div id="content">

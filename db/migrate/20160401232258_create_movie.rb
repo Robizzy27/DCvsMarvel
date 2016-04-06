@@ -7,6 +7,7 @@ class CreateMovie < ActiveRecord::Migration
       t.string :runtime
       t.string :budget
       t.string :opening
+      t.string :video_url
     end
   end
 end

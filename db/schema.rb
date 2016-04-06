@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 20160402041654) do
     t.string  "runtime"
     t.string  "budget"
     t.string  "opening"
+    t.string  "video_url"
     t.integer "publisher_id"
     t.integer "director_id"
   end
