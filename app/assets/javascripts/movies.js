@@ -35,7 +35,7 @@ console.log("in movie ng");
   function RouterFunction($stateProvider){
       $stateProvider
       .state("show", {
-        url: "/movies/:id",
+        url: "/movies/:id/",
         templateUrl: "/ng-views/movies/show.html",
         controller: "showCtrl",
         controllerAs: "showVM"

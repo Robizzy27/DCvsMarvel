@@ -1,11 +1,10 @@
-<!-- <div class="publishershow"><%= image_tag @publisher.image %></div> -->
 <p></p>
   <div id="publisher">
     <% @publisher.movies.each do |movie| %>
       <div class="movie">
         <h3><%= link_to movie.title, movie %> (<%= movie.opening%>)</h3>
         <%#= link_to (image_tag movie.image), movie %>
-        <a href="/movies/<%=movie.id%>/#/movies/<%=movie.id%>" >
+        <a href="/movies/<%=movie.id%>/#/movies/<%=movie.id%>/" >
           <%= image_tag movie.image %>
         </a>
       </div>
