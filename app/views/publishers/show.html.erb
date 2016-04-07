@@ -5,7 +5,7 @@
       <div class="movie">
         <h3><%= link_to movie.title, movie %> (<%= movie.opening%>)</h3>
         <%#= link_to (image_tag movie.image), movie %>
-        <a href="/movies/<%=movie.id%>/#/<%=movie.id%>" >
+        <a href="/movies/<%=movie.id%>/#/movies/<%=movie.id%>" >
           <%= image_tag movie.image %>
         </a>
       </div>

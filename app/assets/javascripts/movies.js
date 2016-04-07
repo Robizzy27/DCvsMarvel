@@ -30,14 +30,8 @@
 
   function RouterFunction($stateProvider){
       $stateProvider
-      .state("index", {
-        url: "/",
-        templateUrl: "ng-views/index.html",
-        controller: "indexCtrl",
-        controllerAs: "indexVM"
-      })
       .state("show", {
-        url: "/:id",
+        url: "/movies/:id",
         templateUrl: "/ng-views/movies/show.html",
         controller: "showCtrl",
         controllerAs: "showVM"
@@ -60,23 +54,33 @@
 
     function showCtrlFunction(Movie, $stateParams){
       var showVM = this;
-      console.log("showCtrlFunction");
+      console.log("showCtrlFunction", $stateParams);
       console.log(Movie.all);
-      showVM.movies = Movie.all;
+
       // if($stateParams.id == undefined){
       //   $stateParams.id = 5;
       // }
-      var id;
-      $stateParams.init = function(id){
-        console.log('setting id to '+id)
-        $stateParams.id = id
-      }
-      Movie.all.forEach(function(movie){
-        if(movie.id == $stateParams.id){
-          showVM.movie = movie;
-        }
+      // var id;
+      // $stateParams.init = function(id){
+      //   console.log('setting id to '+id)
+      //   $stateParams.id = id
+      // }
+      Movie.all.$promise.then(function(){
+        Movie.all.forEach(function(movie){
+          if(movie.id == $stateParams.id){
+            console.log("found movie", movie);
+            showVM.movie = movie;
+            showVM.movies = Movie.all;
+          }
+        });
       });
-
+      // Movie.all.forEach(function(movie){
+      //   if(movie.id == $stateParams.id){
+      //     console.log("found movie", movie);
+      //     showVM.movie = movie;
+      //     showVM.movies = Movie.all;
+      //   }
+      // });
     }
 
     function movFormFunction(Movie){
