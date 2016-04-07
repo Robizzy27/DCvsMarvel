@@ -4,7 +4,7 @@
 "use strict";
 
 (function(){
-
+console.log("in movie ng");
   angular
   .module("movie", [
     "ui.router",
@@ -26,7 +26,11 @@
     "Movie",
     "$stateParams",
     showCtrlFunction
-  ]);
+  ])
+  .run(["$state", function($state){
+    console.log("kickstart");
+    $state.transitionTo("show");
+  }]);
 
   function RouterFunction($stateProvider){
       $stateProvider
