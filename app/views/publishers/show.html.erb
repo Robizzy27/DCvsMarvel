@@ -4,7 +4,10 @@
     <% @publisher.movies.each do |movie| %>
       <div class="movie">
         <h3><%= link_to movie.title, movie %> (<%= movie.opening%>)</h3>
-        <%= link_to (image_tag movie.image), movie %>
+        <%#= link_to (image_tag movie.image), movie %>
+        <a href="/movies/<%=movie.id%>/#/<%=movie.id%>" >
+          <%= image_tag movie.image %>
+        </a>
       </div>
     <% end %>
   </div>

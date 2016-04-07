@@ -1,8 +1,8 @@
 class MoviesController < ApplicationController
   def index
-    @movies = Movie.all
+    @movies = Movie.includes(:publisher, :director, :actors)
     respond_to do |format|
-      format.json{render json: @movies}
+      format.json{render json: @movies, include: [:publisher, :director, :actors]}
       format.html
     end
   end

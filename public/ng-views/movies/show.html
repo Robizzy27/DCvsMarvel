@@ -1,0 +1,41 @@
+<div id="container" data-ng-app="movie">
+  <div id="scrollbar">
+    <div class="poster" data-ng-repeat="movie in showVM.movies | filter:{ publisher_id: showVM.movie.publisher_id}">
+      <a href="#" data-ui-sref="show({id: movie.id})">
+        <img src="/images/{{movie.image}}" alt="" />
+      </a>
+    </div>
+  </div>
+  <div id="sidebar">
+    <div class='movieshow'>
+      <h1> {{showVM.movie.title}} ({{showVM.movie.opening}})</h1>
+      <p>Directed by {{showVM.movie.director.name}}</p>
+      <img src="/images/{{showVM.movie.image}}" alt="" />
+    </div>
+  </div>
+  <div id="content">
+    <div id="synopsis">
+      <p>Released in {{showVM.movie.opening}} by {{showVM.movie.publisher_id}} Comics with a budget of {{showVM.movie.budget}}.</p>
+      <p>{{showVM.movie.synopsis}}</p>
+    </div>
+    <div id="bottom">
+      <div id="director">
+        <h3>Director:</h3>
+          <div class="actor">
+          {{showVM.movie.director.name}}
+            <img src="/images/{{showVM.movie.director.image}}" alt="" />
+          </div>
+      </div>
+      <div id="actors">
+
+        <h3>Actors:</h3>
+        <div class="actor" data-ng-repeat="actor in showVM.movie.actors">
+          {{actor.name}}
+            <img src="/images/{{actor.image}}" alt="" />
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class='clearfix'></div>
+</div>

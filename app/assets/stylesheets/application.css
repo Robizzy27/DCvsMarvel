@@ -185,7 +185,7 @@ a {
     font-size: 18px;
   }
   .movieshow img {
-    float: left;
+    /*float: right;*/
     border: solid 2px #EFEFEF;
     display: block;
     border-radius: 10px;
@@ -218,7 +218,7 @@ a {
    margin-right: auto;
    width: 115px;
    height: 175px;
-   border-radius: 15%;
+   border-radius: 7%;
    box-shadow: 5px 5px 5px #888888;
    -webkit-transition: all .5s ease;
      -moz-transition: all .5s ease;
@@ -251,7 +251,7 @@ a {
   margin: 0;
   padding: 0;
   display: block;
-  border-radius: 35px;
+  border-radius: 17px;
 }
 #container{
   display: block;
@@ -268,22 +268,28 @@ a {
 }
 
 #container #scrollbar{
-  min-height: 470px;
+  min-height: 500px;
   width: 8%;
   height: 100%;
   float: left;
 }
 
 #container #sidebar{
-  min-height: 450px;
+  min-height: 480px;
   width: 28%;
   height: 100%;
   float: left;
   padding: 10px;
   padding-top: 30px;
 }
-#sidebar .poster{
+#container #sidebar .movieshow *{
+  text-align: center;
+  margin: auto;
+}
 
+#scrollbar .poster img {
+  width: 75%;
+  margin: 5px auto;
 }
 #container #content{
   width: 60%;
@@ -314,7 +320,7 @@ a {
   margin-right: auto;
   width: 115px;
   height: 175px;
-  border-radius: 15%;
+  /*border-radius: 15%;*/
   box-shadow: 5px 5px 5px #888888;
   -webkit-transition: all .5s ease;
     -moz-transition: all .5s ease;
