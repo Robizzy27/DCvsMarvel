@@ -1,5 +1,6 @@
 class MoviesController < ApplicationController
   def index
+    # mms: nice performance optimization.
     @movies = Movie.includes(:publisher, :director, :actors)
     respond_to do |format|
       format.json{render json: @movies, include: [:publisher, :director, :actors]}
@@ -31,6 +32,7 @@ class MoviesController < ApplicationController
   end
 
   def update
+    # mms: duplication.  This is the third (of 4) times that you have retrieved a Movie using `params[:id]`.  Looks like a good place for reuse.
     @movie = Movie.find(params[:id])
     @movie.update(movie_params)
     redirect_to publishers_path(@publisher)
