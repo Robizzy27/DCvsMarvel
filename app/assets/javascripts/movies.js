@@ -32,6 +32,7 @@ console.log("in movie ng");
     $state.transitionTo("show");
   }]);
 
+  // mms: starting here, most of the indentation is off, making it a bit harder for me to parse.
   function RouterFunction($stateProvider){
       $stateProvider
       .state("show", {
@@ -60,7 +61,7 @@ console.log("in movie ng");
       var showVM = this;
       console.log("showCtrlFunction", $stateParams);
       console.log(Movie.all);
-
+      // mms: If you leave commented code, indicate why you are leaving it in.  If there's no reason, delete it.
       // if($stateParams.id == undefined){
       //   $stateParams.id = 5;
       // }
@@ -102,6 +103,7 @@ console.log("in movie ng");
         }
         scope.update = function(){
           Movie.update({id: scope.movie.id}, scope.movie, function(response){
+            // mms: recommend more comprehensive log messages - What was successful?
             console.log("Successful");
           });
         }
